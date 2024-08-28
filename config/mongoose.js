@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 // Connection string to MongoDB
-const mongoURI = "mongodb://localhost:27017/habit_tracker";
+const mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/habit_tracker";
 
 // Connecting to MongoDB with recommended options
 mongoose.connect(mongoURI, {
