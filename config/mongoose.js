@@ -23,3 +23,6 @@ db.on("error", (error) => {
 db.once("open", () => {
   console.log("Connected to Database :: MongoDB");
 });
+
+// Export the db object for use in other parts of the application
+export default db;
