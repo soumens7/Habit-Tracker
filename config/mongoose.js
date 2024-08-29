@@ -1,24 +1,27 @@
 import mongoose from 'mongoose';
 
-const mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/habit_tracker";
+// Connection URI
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/habit_tracker';
 
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  connectTimeoutMS: 30000, // Increase connection timeout to 30 seconds
-  socketTimeoutMS: 45000,  // Increase socket timeout to 45 seconds
-}).catch(error => {
-  console.error("Error connecting to MongoDB:", error);
-});
+// Function to connect to MongoDB
+async function connectToDatabase() {
+  try {
+    // Await the connection to ensure it's established before queries are executed
+    await mongoose.connect(mongoURI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      connectTimeoutMS: 30000, // 30 seconds for initial connection timeout
+      socketTimeoutMS: 45000,  // 45 seconds for ongoing operations
+    });
 
-const db = mongoose.connection;
+    console.log('Connected to Database :: MongoDB');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+    process.exit(1); // Optionally exit the process if the connection fails
+  }
+}
 
-db.on('error', (err) => {
-  console.error('MongoDB connection error:', err);
-});
+// Call the connect function
+connectToDatabase();
 
-db.once('open', () => {
-  console.log('Connected to Database :: MongoDB');
-});
-
-export default db;
+export default mongoose.connection;
