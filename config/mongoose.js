@@ -1,28 +1,24 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-// Connection string to MongoDB
 const mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/habit_tracker";
 
-// Connecting to MongoDB with recommended options
 mongoose.connect(mongoURI, {
-  useNewUrlParser: true,       // Parses MongoDB connection strings
-  useUnifiedTopology: true,    // Opts into the MongoDB driver's new connection management engine
-  useCreateIndex: true,        // Ensures indexes are created properly
-  useFindAndModify: false,     // Uses native `findOneAndUpdate()` rather than Mongoose's deprecated `findAndModify()`
-});
-
-// Mongoose database connection
-const db = mongoose.connection;
-
-// Handling connection errors
-db.on("error", (error) => {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  connectTimeoutMS: 30000, // Increase connection timeout to 30 seconds
+  socketTimeoutMS: 45000,  // Increase socket timeout to 45 seconds
+}).catch(error => {
   console.error("Error connecting to MongoDB:", error);
 });
 
-// Handling successful connection
-db.once("open", () => {
-  console.log("Connected to Database :: MongoDB");
+const db = mongoose.connection;
+
+db.on('error', (err) => {
+  console.error('MongoDB connection error:', err);
 });
 
-// Export the db object for use in other parts of the application
+db.once('open', () => {
+  console.log('Connected to Database :: MongoDB');
+});
+
 export default db;
