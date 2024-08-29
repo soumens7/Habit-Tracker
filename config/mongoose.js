@@ -7,6 +7,7 @@ mongoose.connect(mongoURI, {
   useUnifiedTopology: true,
   connectTimeoutMS: 30000, // Increase connection timeout to 30 seconds
   socketTimeoutMS: 45000,  // Increase socket timeout to 45 seconds
+  bufferCommands: false,  // Disable buffering
 }).catch(error => {
   console.error("Error connecting to MongoDB:", error);
 });
