@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 // Connection URI
-const mongoURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/habit_tracker';
+const mongoURI = 'mongodb+srv://soumensarkar7498:habits@cluster0.ry6od.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 // Function to connect to MongoDB
 async function connectToDatabase() {
