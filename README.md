@@ -1,7 +1,7 @@
 # Habit Tracker Application
 
 This is a simple Habit Tracking web application built using Node.js, Express, and MongoDB. The app allows users to create, track, update, and delete habits while visualizing their progress.
-Check out the live version of the project here[https://habit-tracker-ritt.onrender.com]
+Check out the live version of the project [here](https://habit-tracker-ritt.onrender.com)
 
 ## Features
 
