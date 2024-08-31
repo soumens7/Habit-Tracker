@@ -36,7 +36,7 @@
   overflow-y: auto;
 }
 
-/* list iems showing habits */
+/* list items showing habits */
 #habits li {
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@
   text-transform: capitalize;
   margin: 0;
 }
-/* the streak for a particular habit in list */
+/* the streak for a particular habit in the list */
 .habit-streak {
   margin-right: 2%;
   margin-left: 2%;
