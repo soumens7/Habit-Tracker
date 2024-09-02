@@ -10,6 +10,10 @@
 #box {
   padding: 2% !important;
   margin-top: 0.5%;
+  background-image: url("../images/habit-image.jpg");
+}
+.text-black , .col-lg-3{
+  color: black; /* Set text color to white */
 }
 /* styling week days container */
 .week-days {
@@ -35,8 +39,9 @@
 #habits li {
   display: flex;
   flex-direction: column;
+  background-color:rgba(90, 90, 90, 0);
 }
-/* the streak for a particular habit in list */
+/* the streak for a particular habit in the list */
 .habit-streak {
   display: flex;
   justify-content: space-evenly;
