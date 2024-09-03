@@ -13,9 +13,9 @@
   background-image: url("../images/habit-image.jpg");
 }
 .text-black , .col-lg-3{
-  color: black; /* Set text color to white */
+  color: black;
 }
-/* styling week days container */
+/* styling weekdays container */
 .week-days {
   display: flex !important;
   justify-content: space-evenly;
@@ -35,7 +35,7 @@
   max-height: 55vh;
   overflow-y: auto;
 }
-/* list iems showing habits */
+/* list items showing habits */
 #habits li {
   display: flex;
   flex-direction: column;
