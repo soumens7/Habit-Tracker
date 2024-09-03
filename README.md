@@ -4,6 +4,19 @@ This is a simple Habit Tracking web application built using Node.js, Express, an
 
 Check out the live version of the project [here](https://habit-tracker-1-xz6v.onrender.com)
 
+## Installation and Run
+
+Follow these steps:
+
+- Get the code on your system.
+- Open the terminal on your pc and navigate to the project's root directory.
+- Run the "npm install" command inside the terminal to install all the required dependencies.
+- Create a '.env' file inside the root directory and define values for
+- PORT ( port on which your project will run )
+- MONGODB_URL ( URL of your MongoDB database for connecting to a database )
+- Run the 'npm start' command inside the terminal to run the code.
+- Open your web browser and search for 'localhost:{PORT}/' to see the output.
+
 ## Features
 
 - **Create Habits**: Users can add new habits with details like name, description, frequency, and duration.
