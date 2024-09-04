@@ -13,7 +13,7 @@ Follow these steps:
 - Run the "npm install" command inside the terminal to install all the required dependencies.
 - Create a '.env' file inside the root directory and define values for
 - PORT ( port on which your project will run )
-- MONGODB_URL ( URL of your MongoDB database for connecting to a database )
+- MONGODB_URI ( URI of your MongoDB database for connecting to a database )
 - Run the 'npm start' command inside the terminal to run the code.
 - Open your web browser and search for 'localhost:{PORT}/' to see the output.
 
