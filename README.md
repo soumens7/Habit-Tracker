@@ -25,6 +25,13 @@ Follow these steps:
 - **Delete Habits**: Users can delete any habit they no longer wish to track.
 - **View Habit Details**: Users can view all their habits on the details page with their corresponding completion status.
 
+## Usage
+
+<img width="1512" alt="Screenshot 2025-01-25 at 2 24 41 PM" src="https://github.com/user-attachments/assets/0554e257-5b3d-4ba6-ba11-0b14024a1404" />
+<img width="1512" alt="Screenshot 2025-01-25 at 2 25 20 PM" src="https://github.com/user-attachments/assets/34a265e8-c68b-4c59-97fb-39b3af1808fa" />
+<img width="1508" alt="Screenshot 2025-01-25 at 2 26 24 PM" src="https://github.com/user-attachments/assets/12273f5c-b5f7-4f75-9379-09b4e48e6529" />
+
+
 ## Project Structure
 
 ```bash
